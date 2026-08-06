@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/*
+ * The full design-token palette (exact dark blue / electric blue / cyan
+ * values) is defined in stage 2 alongside the planet material, once the
+ * palette is confirmed. This file only proves the Tailwind pipeline works.
+ */
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+}
