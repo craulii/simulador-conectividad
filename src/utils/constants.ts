@@ -1,0 +1,5 @@
+export const PLANET_RADIUS = 2;
+export const ATMOSPHERE_RADIUS = PLANET_RADIUS * 1.035;
+
+export const CAMERA_MIN_DISTANCE = PLANET_RADIUS * 1.6;
+export const CAMERA_MAX_DISTANCE = PLANET_RADIUS * 8;
