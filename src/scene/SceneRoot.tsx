@@ -1,5 +1,5 @@
 import { Atmosphere } from "@/entities/planet/Atmosphere";
-import { Planet } from "@/entities/planet/Planet";
+import { PlanetSystem } from "@/entities/planet/PlanetSystem";
 
 import { CameraRig } from "./CameraRig";
 import { SceneLighting } from "./SceneLighting";
@@ -12,7 +12,7 @@ export function SceneRoot() {
       <CameraRig />
       <SceneLighting />
       <Starfield />
-      <Planet />
+      <PlanetSystem />
       <Atmosphere />
     </>
   );

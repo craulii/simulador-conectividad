@@ -2,6 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import type { ReactNode } from "react";
 import { ACESFilmicToneMapping, SRGBColorSpace } from "three";
 
+import { useNetworkStore } from "@/state/useNetworkStore";
 import { CAMERA_MAX_DISTANCE, PLANET_RADIUS } from "@/utils/constants";
 
 interface CanvasRootProps {
@@ -24,6 +25,7 @@ export function CanvasRoot({ children }: CanvasRootProps) {
         far: CAMERA_MAX_DISTANCE * 3,
         position: [0, PLANET_RADIUS * 1.4, PLANET_RADIUS * 4.5],
       }}
+      onPointerMissed={() => useNetworkStore.getState().select(null)}
     >
       {children}
     </Canvas>

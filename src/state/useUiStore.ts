@@ -8,6 +8,9 @@ interface UiState {
 
   layersPanelOpen: boolean;
   toggleLayersPanel: () => void;
+
+  draggingElementId: string | null;
+  setDraggingElementId: (id: string | null) => void;
 }
 
 export const useUiStore = create<UiState>((set) => ({
@@ -16,4 +19,7 @@ export const useUiStore = create<UiState>((set) => ({
 
   layersPanelOpen: false,
   toggleLayersPanel: () => set((state) => ({ layersPanelOpen: !state.layersPanelOpen })),
+
+  draggingElementId: null,
+  setDraggingElementId: (id) => set({ draggingElementId: id }),
 }));
